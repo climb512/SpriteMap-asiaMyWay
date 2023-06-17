@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+	<title>New document</title>
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+
+		  $("li#laos a").hover(
+		    function() {
+		  		$("li#laos a").css("background-image", "url('Laos-Hover.png')");
+		  		$("li#laos a").css("background-position", "127px -468px");
+		  		$("li#laos2 a").css("background-image", "url('Laos-Hover.png')");
+		  		$("li#laos2 a").css("background-position", "51px -92px");
+		  	  }, function() {
+		  	  	$("li#laos a").css("background-image", "url('')");
+		  	  	$("li#laos a").css("background-position", "0px 0px");
+		  	  	$("li#laos2 a").css("background-image", "url('')");
+		  	  	$("li#laos2 a").css("background-position", "0px 0px");
+			  });
+
+		  $("li#laos2 a").hover(
+		    function() {
+		  		$("li#laos a").css("background-image", "url('Laos-Hover.png')");
+		  		$("li#laos a").css("background-position", "126px -468px");
+		  		$("li#laos2 a").css("background-image", "url('Laos-Hover.png')");
+		  		$("li#laos2 a").css("background-position", "51px -92px");
+		  	  }, function() {
+		  	  	$("li#laos a").css("background-image", "url('')");
+		  	  	$("li#laos a").css("background-position", "0px 0px");
+		  	  	$("li#laos2 a").css("background-image", "url('')");
+		  	  	$("li#laos2 a").css("background-position", "0px 0px");
+			  });
+		});
+	</script>
+
+<style>
+ul#continents {
+	list-style: none;
+	background: url(fullMap.png) no-repeat 0 0;
+	position: relative;
+	width: 323px;
+	height: 425px;
+	margin: 0;
+	padding: 0;
+}
+ul#continents li {
+/*	 border: 1px solid #000; */
+	position: absolute;
+}
+
+ul#continents li a{
+	display: block;
+	height: 100%;
+	text-decoration: none;
+}
+
+#burma {
+	width: 156px;
+	height: 319px;
+	top: 19px;
+	left: 14px;
+}
+
+#cambodia {
+	width: 92px;
+	height: 68px;
+	top: 258px;
+	left: 191px;
+	z-index:99;
+}
+#laos {
+	width: 96px;
+	height: 90px;
+	top: 117px;
+	left: 154px;
+}
+
+#laos2 {
+	width: 50px;
+	height: 62px;
+	top: 207px;
+	left: 230px;
+}
+
+#thailand {
+	width: 136px;
+	height: 262px;
+	top: 152px;
+	left: 111px;
+}
+
+
+/*---background images----*/
+ul#continents li a:hover {
+	display: block;
+}
+
+ul#continents li#burma a:hover {
+	background: url(Burma-Hover.png) no-repeat 1px -11px;
+}
+
+ul#continents li#thailand a:hover {
+	background: url(Thailand-Hover.png) no-repeat -2px -5px;
+}
+/*  Loas picture is in 2 parts, so handled by jQuery above
+ul#continents li#laos qa:hover {
+	background: url(Laos-Hover.png) no-repeat -1px -3px;
+}
+
+ ul#continents li#laos2 qa:hover {
+	background: url(Laos-Hover.png) no-repeat -1px -4px;
+}
+*/
+
+ul#continents li#cambodia a:hover {
+	background: url(Cambodia-Hover.png) no-repeat -2px -3px;
+}
+/*---/background images----*/
+
+/*
+ul#continents li a:hover span {
+	display: block;
+	padding: 5px;
+	width: 150px;
+	background: #000;
+	position: relative;
+	top: 30%;
+	font: 11px Arial, Helvetica, sans-serif;
+	opacity: .55;
+	filter:alpha(opacity=55);
+	color: #FFF;
+}
+*/
+
+/* ------ Tooltips ----------*/
+a.tooltips {
+	position: relative;
+	display: inline;
+}
+a.tooltips span {
+	position: absolute;
+	width:140px;
+	color: #FFFFFF;
+	background: #2B2421;
+	border: 2px solid #F3DF9C;
+	height: 60px;
+	line-height: 25px;
+	text-align: center;
+	visibility: hidden;
+	border-radius: 2px;
+	box-shadow: 2px 2px 5px #787878;
+}
+/* Default
+a:hover.tooltips span {
+visibility: visible;
+opacity: 1;
+bottom: 30px;
+left: 50%;
+margin-left: -76px;
+z-index: 999;
+} */
+li#burma a:hover.tooltips span {
+	visibility: visible;
+	opacity: 1;
+	top: 8px;
+	left: 25%;
+	margin-left: -76px;
+	z-index: 999;
+}
+li#thailand a:hover.tooltips span {
+	visibility: visible;
+	opacity: 1;
+	top: 110px;
+	left: 8%;
+	margin-left: -76px;
+	z-index: 999;
+}
+li#laos a:hover.tooltips span {
+	visibility: visible;
+	opacity: 1;
+	bottom: 70px;
+	margin-left: -10px;
+	z-index: 999;
+}
+li#cambodia a:hover.tooltips span {
+	visibility: visible;
+	opacity: 1;
+	top: 70px;
+	right: -80%;
+	margin-left: 111px;
+	z-index: 999;
+}
+/* Default
+a.tooltips span:before {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -12px;
+	width: 1px; height: 1px;
+	border-top: 16px solid #F3DF9C;
+	border-right: 34px solid transparent;
+	border-left: 2px solid transparent;
+}
+a.tooltips span:after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -8px;
+	width: 0; height: 0;
+	border-top: 12px solid #2B2421;
+	border-right: 28px solid transparent;
+	border-left: 1px solid transparent;
+}
+*/
+li#burma a.tooltips span:before {
+	content: '';
+	position: absolute;
+	top: 100%; /* yellow arrow position */
+	left: 50%; /* yellow arrow position */
+	margin-left: -12px; /* yellow arrow position */
+	width: 1px; height: 1px;
+	border-top: 16px solid #F3DF9C;
+	border-right: 2px solid transparent;
+	border-left: 34px solid transparent;
+}
+li#burma a.tooltips span:after {
+	content: '';
+	position: absolute;
+	top: 100%; /* black arrow position */
+	left: 50%; /* black arrow position */
+	margin-left: -8px; /* black arrow position */
+	width: 0; height: 0;
+	border-top: 12px solid #2B2421;
+	border-right: 1px solid transparent;
+	border-left: 28px solid transparent;
+}
+li#thailand a.tooltips span:before {
+	content: '';
+	position: absolute;
+	bottom: 100%; /* yellow arrow position */
+	left: 70%; /* yellow arrow position */
+	margin-left: -12px; /* yellow arrow position */
+	width: 1px; height: 1px;
+	border-bottom: 16px solid #F3DF9C;
+	border-right: 2px solid transparent;
+	border-left: 34px solid transparent;
+}
+li#thailand a.tooltips span:after {
+	content: '';
+	position: absolute;
+	bottom: 100%; /* black arrow position */
+	left: 70%; /* black arrow position */
+	margin-left: -8px; /* black arrow position */
+	width: 0; height: 0;
+	border-bottom: 12px solid #2B2421;
+	border-right: 1px solid transparent;
+	border-left: 28px solid transparent;
+}
+li#laos a.tooltips span:before {
+	content: '';
+	position: absolute;
+	top: 100%; /* yellow arrow position */
+	left: 50%; /* yellow arrow position */
+	margin-left: -12px; /* yellow arrow position */
+	width: 1px; height: 1px;
+	border-top: 16px solid #F3DF9C;
+	border-right: 34px solid transparent;
+	border-left: 2px solid transparent;
+}
+li#laos a.tooltips span:after {
+	content: '';
+	position: absolute;
+	top: 100%; /* black arrow position */
+	left: 50%; /* black arrow position */
+	margin-left: -8px; /* black arrow position */
+	width: 0; height: 0;
+	border-top: 12px solid #2B2421;
+	border-right: 28px solid transparent;
+	border-left: 1px solid transparent;
+}
+li#cambodia a.tooltips span:before {
+	content: '';
+	position: absolute;
+	bottom: 100%; /* yellow arrow position */
+	left: 20%; /* yellow arrow position */
+	margin-left: -12px; /* yellow arrow position */
+	width: 1px; height: 1px;
+	border-bottom: 16px solid #F3DF9C;
+	border-right: 34px solid transparent;
+	border-left: 2px solid transparent;
+}
+li#cambodia a.tooltips span:after {
+	content: '';
+	position: absolute;
+	bottom: 100%; /* black arrow position */
+	left: 20%; /* black arrow position */
+	margin-left: -8px; /* black arrow position */
+	width: 0; height: 0;
+	border-bottom: 12px solid #2B2421;
+	border-right: 28px solid transparent;
+	border-left: 1px solid transparent;
+}
+/* --------------- \Tooltips -------------*/
+
+</style>
+
+
+
+</head>
+<body>
+
+<ul id="continents">
+    <li id="burma"><a class="tooltips" href="#Burma"><span>BIRMANIE<br/>Pays Du Matin Doux</span></a></li>
+    <li id="thailand"><a class="tooltips" href="#Thailand"><span>Thailand<br/>Pays Du Matin Doux</span></a></li>
+    <li id="laos"><a class="tooltips" href="#Laos"><span>Laos<br/>Pays Du Matin Doux</span></a></li>
+    <li id="laos2"><a href="#Laos"><span></span></a></li>
+    <li id="cambodia"><a class="tooltips" href="#Cambodia"><span>Cambodia<br/>Pays Du Matin Doux</span></a></li>
+</ul>
+
+</body>
+</html>
